@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+<br>
+<h2> Korisnici </h2>
+<br>
+{% for korisnik in korisnik_list %}
+    <div class="korisnik">
+        <h4>{{ korisnik.first_name }} {{ korisnik.last_name }}</h4>
+        <p>Datum rodenja: {{korisnik.birth_date}}</p>
+        <p>Email: {{korisnik.email}}</p>
+        <p>Broj mobitela: {{korisnik.phone}}</p>
+    </div>
+{% endfor %}
+{% endblock %}

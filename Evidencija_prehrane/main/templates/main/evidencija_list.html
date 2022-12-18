@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+<br>
+<h2> Evidencija </h2>
+<br>
+{% for evidencija in evidencija_list %}
+    <div class="evidencija">
+        <h3>{{ evidencija.day }} {{evidencija.date}}</h3>
+        <h4> <a href="{{evidencija.korisnik.first_name}}">{{evidencija.user}}</a></h4>
+        <p> Obroci:<br/>{% for meals in evidencija.meals.all %}{{ meals }}<br/>{% endfor %}</p>
+        <p>Desert: {{ evidencija.desert_name }}</p>
+    </div>
+{% endfor %}
+{% endblock %}

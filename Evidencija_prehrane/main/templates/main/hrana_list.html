@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+<br>
+<h2> Hrana </h2>
+<br>
+{% for hrana in hrana_list %}
+    <div class="hrana">
+        <h4>{{ hrana.food_name }}</h4>
+        <p>Proteini(g): {{hrana.gram_protein}}</p>
+        <p>Masnoce(g): {{hrana.gram_fat}}</p>
+        <p>Ugljikohidrati(g): {{hrana.gram_carbs}}</p>
+    </div>
+{% endfor %}
+{% endblock %}

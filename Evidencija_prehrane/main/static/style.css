@@ -1,0 +1,39 @@
+h1 {
+    color: purple;
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+}
+
+li {
+    list-style-type: none;
+    float: left;
+}
+
+li a {
+    padding: 16px;
+}
+h4 a {
+    text-decoration: none;
+    background-color: transparent;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+}
+.navbar a{
+    text-decoration: none;
+    background-color: transparent;
+    font-weight: bold;
+    color: black;
+}
+.navbar a:hover,
+.navbar a:focus{
+    background-color: lightgray;
+}

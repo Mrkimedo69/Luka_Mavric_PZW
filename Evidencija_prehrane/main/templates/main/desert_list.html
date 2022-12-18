@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block content %}
+<br>
+<h2> Deserti </h2>
+<br>
+{% for desert in desert_list %}
+    <div class="desert">
+        <h4>{{ desert.desert_name }}</h4>
+        <p>Da li je od cokolade: {{desert.choco}}</p>
+        <p>Kcal: {{desert.kcal}}</p>
+    </div>
+{% endfor %}
+{% endblock %}

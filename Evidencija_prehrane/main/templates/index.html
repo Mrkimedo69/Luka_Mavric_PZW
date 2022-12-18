@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">    
+    <h1>Evidencija prehrane</h1>
+</head>
+
+<body>
+    <header>    
+        <div class="navbar">
+        {% block navbar %}
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="/korisniks">Korisnik</a></li>
+            <li><a href="/hranas">Hrana</a></li>
+            <li><a href="/deserts">Desert</a></li>
+            <li><a href="/evidencijas">Evidencija</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+</header>
+
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
