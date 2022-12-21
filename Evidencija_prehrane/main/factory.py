@@ -21,7 +21,7 @@ class KorisnikFactory(DjangoModelFactory):
 	email = factory.Faker("free_email")
 	phone = factory.Faker("phone_number")
 
-class HranaFactroy(DjangoModelFactory):
+class HranaFactory(DjangoModelFactory):
 	class Meta:
 		model = Hrana
 
@@ -44,5 +44,5 @@ class EvidencijaFactory(DjangoModelFactory):
 	
 	day = factory.Faker("sentence",ext_word_list=my_days_list,nb_words=1)
 	date = factory.Faker("date_time")
-	user = factory.Iterator(Korisnik.objects.all())
+	user = factory.SubFactory(KorisnikFactory)
 	desert_name = factory.Iterator(Desert.objects.all())
